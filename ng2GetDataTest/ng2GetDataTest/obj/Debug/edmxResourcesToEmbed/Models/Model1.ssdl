@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbTestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DbTestModelStoreContainer">
+    <EntitySet Name="ApplyInfo" EntityType="DbTestModel.Store.ApplyInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserInfo" EntityType="DbTestModel.Store.UserInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ApplyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProcessID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyTime" Type="datetime" />
+    <Property Name="Applicant" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Department" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="InvoiceValue" Type="float" Nullable="false" />
+    <Property Name="PayMoney" Type="float" Nullable="false" />
+    <Property Name="PayModel" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="PayWho" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BankAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ApplyStatus" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="PayType" Type="nchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProcessID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DomainAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserTitleImg" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyTime" Type="datetime" />
+  </EntityType>
+</Schema>

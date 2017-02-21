@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbTestModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DbTestModel1StoreContainer">
+    <EntitySet Name="Info" EntityType="DbTestModel1.Store.Info" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestTab" EntityType="DbTestModel1.Store.TestTab" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Info">
+    <Key>
+      <PropertyRef Name="PrcID" />
+    </Key>
+    <Property Name="PrcID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="sex" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TestTab">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="desc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="completed" Type="bit" Nullable="false" />
+    <Property Name="ProcessID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProcessName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>
